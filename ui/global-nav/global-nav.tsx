@@ -1,16 +1,28 @@
 'use client';
 
 import { items } from '#/lib/items';
+import useItemStore from '#/stores/width.store';
 import { CapsLogo } from '#/ui/caps-logo';
 
 import { MenuAlt2Icon, XIcon } from '@heroicons/react/solid';
 import clsx from 'clsx';
-import Link from 'next/link';
 import { MouseEvent, useState } from 'react';
 
 export function GlobalNav() {
   const [isOpen, setIsOpen] = useState(false);
+
   const close = () => setIsOpen(false);
+
+  const onLogoClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+
+    close();
+  };
+
+  const { getActivity } = useItemStore();
 
   const handleClick = (event: MouseEvent<HTMLElement>, target: string) => {
     event.preventDefault();
@@ -22,16 +34,17 @@ export function GlobalNav() {
         35,
       behavior: 'smooth',
     });
+
+    close();
   };
 
   return (
     <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-400 bg-gray-100 lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-400">
-      <div className="flex h-14 items-center px-4 py-4 lg:h-auto">
-        <Link
-          href="/"
-          className="group flex w-full items-center gap-x-2.5"
-          onClick={close}
-        >
+      <div
+        onClick={onLogoClick}
+        className="flex h-14 cursor-pointer items-center px-4 py-4 lg:h-auto"
+      >
+        <div className="group flex w-full items-center gap-x-2.5">
           <div className="h-10 w-10 rounded-full border border-black/20 p-2 group-hover:border-black/60">
             <CapsLogo />
           </div>
@@ -39,7 +52,7 @@ export function GlobalNav() {
           <h3 className="font-semibold tracking-wide text-gray-600 group-hover:text-gray-900">
             Capsmark
           </h3>
-        </Link>
+        </div>
       </div>
 
       <button
@@ -63,28 +76,42 @@ export function GlobalNav() {
           hidden: !isOpen,
         })}
       >
-        <nav className="space-y-6 px-2 pb-24 pt-5">
-          {items.map(({ name, id }) => (
-            <div key={name}>
-              <div
-                className="mb-2 cursor-pointer px-3 text-xs font-bold uppercase tracking-wider text-gray-900 "
-                onClick={(e) => handleClick(e, id)}
-              >
-                <div>{name}</div>
-              </div>
+        {/*
+         */}
 
-              {/* <div className="space-y-1">
-                  {items.map((item, index) => (
-                    <GlobalNavItem
-                      key={index}
-                      item={item}
-                      close={close}
-                      active={activeItem === item.id ? true : false}
-                    />
-                  ))}
-                </div> */}
-            </div>
-          ))}
+        <nav className="space-y-6 px-2 pb-24 pt-5">
+          {items.map(({ name, id }, index) => {
+            const isActive = getActivity(index);
+
+            return (
+              <div key={name}>
+                <div
+                  className={clsx(
+                    ' text-gray-6W00 mb-2 cursor-pointer rounded-md px-3 py-2 text-xs font-bold uppercase tracking-wider ',
+                    {
+                      'text-gray-600 hover:bg-gray-600 hover:text-gray-100':
+                        !isActive,
+                      'bg-white text-black': isActive,
+                    },
+                  )}
+                  onClick={(e) => handleClick(e, id)}
+                >
+                  <div>{name}</div>
+                </div>
+
+                {/* <div className="space-y-1">
+                {items.map((item, index) => (
+                  <GlobalNavItem
+                    key={index}
+                    item={item}
+                    close={close}
+                    active={activeItem === item.id ? true : false}
+                  />
+                ))}
+              </div> */}
+              </div>
+            );
+          })}
         </nav>
       </div>
     </div>

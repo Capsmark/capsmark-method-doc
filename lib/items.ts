@@ -30,7 +30,14 @@ type List = {
   listItems: string[];
 };
 
-export const items: { name: string; items: Item[]; id: string }[] = [
+// todo place these types into seprate file
+export type ItemsList = {
+  name: string;
+  items: Item[];
+  id: string;
+};
+
+export const items: ItemsList[] = [
   {
     name: 'CAPSMARK Story, Models & Future',
     id: 'story',
