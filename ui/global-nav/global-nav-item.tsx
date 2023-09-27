@@ -21,8 +21,7 @@ export function GlobalNavItem({
   return (
     <Link
       onClick={close}
-      href={`/`}
-      // href={`/${item._id_can_be_added_to_object}`}
+      href={`/#${item.id}`}
       className={clsx(
         'block rounded-md px-3 py-2 text-sm font-medium hover:text-gray-300',
         {
