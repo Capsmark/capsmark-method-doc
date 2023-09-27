@@ -1,11 +1,11 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import { items } from '#/lib/items';
 import { CapsLogo } from '#/ui/caps-logo';
 import { MenuAlt2Icon, XIcon } from '@heroicons/react/solid';
 import clsx from 'clsx';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { GlobalNavItem } from './global-nav-item';
 
 export function GlobalNav() {
@@ -96,18 +96,18 @@ export function GlobalNav() {
   };
 
   return (
-    <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-800 bg-black lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-800">
+    <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-400 bg-gray-100 lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-400">
       <div className="flex h-14 items-center px-4 py-4 lg:h-auto">
         <Link
           href="/"
           className="group flex w-full items-center gap-x-2.5"
           onClick={close}
         >
-          <div className="h-10 w-10 rounded-full border border-white/20 p-2 group-hover:border-white/60">
+          <div className="h-10 w-10 rounded-full border border-black/20 p-2 group-hover:border-black/60">
             <CapsLogo />
           </div>
 
-          <h3 className="font-semibold tracking-wide text-gray-400 group-hover:text-gray-50">
+          <h3 className="font-semibold tracking-wide text-gray-600 group-hover:text-gray-900">
             Capsmark
           </h3>
         </Link>
@@ -118,19 +118,19 @@ export function GlobalNav() {
         className="group absolute right-0 top-0 flex h-14 items-center gap-x-2 px-4 lg:hidden"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <div className="font-medium text-gray-100 group-hover:text-gray-400">
+        <div className="font-medium text-gray-700 group-hover:text-gray-900">
           Menu
         </div>
         {isOpen ? (
-          <XIcon className="block w-6 text-gray-400" />
+          <XIcon className="block w-6 text-gray-600" />
         ) : (
-          <MenuAlt2Icon className="block w-6 text-gray-400" />
+          <MenuAlt2Icon className="block w-6 text-gray-600" />
         )}
       </button>
 
       <div
         className={clsx('overflow-y-auto lg:static lg:block', {
-          'fixed inset-x-0 bottom-0 top-14 mt-px bg-black': isOpen,
+          'fixed inset-x-0 bottom-0 top-14 mt-px bg-white': isOpen,
           hidden: !isOpen,
         })}
       >
@@ -139,7 +139,7 @@ export function GlobalNav() {
             return (
               <div key={name}>
                 <div
-                  className="mb-2 cursor-pointer px-3 text-xs font-semibold uppercase tracking-wider text-gray-400/80 "
+                  className="mb-2 cursor-pointer px-3 text-xs font-semibold uppercase tracking-wider text-gray-900 "
                   onClick={(e) => handleClick(e, id)}
                 >
                   <div>{name}</div>

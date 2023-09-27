@@ -29,8 +29,11 @@ export function GlobalNavItem({
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
+
     anchorTarget &&
       anchorTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    close();
   };
 
   return (
@@ -38,10 +41,10 @@ export function GlobalNavItem({
       href={`/#${item.id}`}
       onClick={handleClick}
       className={clsx(
-        'block rounded-md px-3 py-2 text-sm font-medium hover:text-gray-300',
+        'block rounded-md px-3 py-2 text-sm font-medium hover:text-gray-800',
         {
-          'text-gray-400 hover:bg-gray-800': !active,
-          'text-white': active,
+          'text-gray-600 hover:bg-gray-200': !active,
+          'text-black': active,
         },
       )}
     >

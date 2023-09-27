@@ -1,5 +1,7 @@
 'use client';
+
 import { type Item } from '#/lib/items';
+
 import Image from 'next/image';
 
 export function SectionsMain({ item }: { item: Item }) {
@@ -11,7 +13,7 @@ export function SectionsMain({ item }: { item: Item }) {
         item.picture.map((pic) => {
           return (
             <div>
-              <Image src={pic.url} />
+              <Image src={pic.url} alt="image" />
               {pic.firstSetOfParagraphs &&
                 pic.firstSetOfParagraphs.map((par) => (
                   <p className="mb-6 mt-6">{par}</p>
