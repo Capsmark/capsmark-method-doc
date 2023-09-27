@@ -89,9 +89,9 @@ export function GlobalNav() {
                   className={clsx(
                     ' text-gray-6W00 mb-2 cursor-pointer rounded-md px-3 py-2 text-xs font-bold uppercase tracking-wider ',
                     {
-                      'text-gray-600 hover:bg-gray-600 hover:text-gray-100':
+                      'text-gray-600 hover:bg-gray-500 hover:text-white':
                         !isActive,
-                      'bg-white text-black': isActive,
+                      'bg-gray-800 text-gray-100': isActive,
                     },
                   )}
                   onClick={(e) => handleClick(e, id)}
