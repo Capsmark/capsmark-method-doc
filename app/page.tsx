@@ -13,7 +13,7 @@ export default function Page() {
           return (
             <section key={name} className="space-y-5">
               <h2
-                className="text-xs font-semibold uppercase tracking-wider text-gray-900"
+                className="text-lg font-bold uppercase tracking-wider text-gray-900"
                 id={id}
               >
                 {name}
@@ -23,9 +23,8 @@ export default function Page() {
                 {items.map((item) => (
                   <section
                     key={item.id}
-                    className=" space-y-3 text-lg font-bold text-gray-700"
+                    className=" space-y-3 text-2xl font-bold text-gray-700"
                   >
-                    <h1 id={item.id}>{item.name}</h1>
                     <div>
                       <SectionsMain item={item} />
                     </div>

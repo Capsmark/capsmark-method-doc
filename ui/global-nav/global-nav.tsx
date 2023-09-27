@@ -6,7 +6,6 @@ import { MenuAlt2Icon, XIcon } from '@heroicons/react/solid';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { GlobalNavItem } from './global-nav-item';
 
 export function GlobalNav() {
   // todo change later
@@ -135,17 +134,16 @@ export function GlobalNav() {
         })}
       >
         <nav className="space-y-6 px-2 pb-24 pt-5">
-          {items.map(({ name, items, id }) => {
-            return (
-              <div key={name}>
-                <div
-                  className="mb-2 cursor-pointer px-3 text-xs font-semibold uppercase tracking-wider text-gray-900 "
-                  onClick={(e) => handleClick(e, id)}
-                >
-                  <div>{name}</div>
-                </div>
+          {items.map(({ name, id }) => (
+            <div key={name}>
+              <div
+                className="mb-2 cursor-pointer px-3 text-xs font-bold uppercase tracking-wider text-gray-900 "
+                onClick={(e) => handleClick(e, id)}
+              >
+                <div>{name}</div>
+              </div>
 
-                <div className="space-y-1">
+              {/* <div className="space-y-1">
                   {items.map((item, index) => (
                     <GlobalNavItem
                       key={index}
@@ -154,10 +152,9 @@ export function GlobalNav() {
                       active={activeItem === item.id ? true : false}
                     />
                   ))}
-                </div>
-              </div>
-            );
-          })}
+                </div> */}
+            </div>
+          ))}
         </nav>
       </div>
     </div>

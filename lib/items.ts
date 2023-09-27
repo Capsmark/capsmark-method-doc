@@ -150,4 +150,19 @@ export const items: { name: string; items: Item[]; id: string }[] = [
       },
     ],
   },
+  {
+    name: 'S&P500 Multi-Transformer (Beta)',
+    id: 'multi-transformer',
+    items: [],
+  },
+  {
+    name: 'Quantitative Economics',
+    id: 'quantitative-economics',
+    items: [],
+  },
+  {
+    name: 'Future Vision',
+    id: 'future-vision',
+    items: [],
+  },
 ];
