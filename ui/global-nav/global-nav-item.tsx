@@ -3,7 +3,6 @@
 import { type Item } from '#/lib/items';
 import clsx from 'clsx';
 import Link from 'next/link';
-import { useSelectedLayoutSegment } from 'next/navigation';
 
 export function GlobalNavItem({
   item,
@@ -12,9 +11,6 @@ export function GlobalNavItem({
   item: Item;
   close: () => false | void;
 }) {
-  // can be usefull to detect the # tag
-  const segment = useSelectedLayoutSegment();
-
   // todo add logic to check if is active
   const isActive = true;
 
