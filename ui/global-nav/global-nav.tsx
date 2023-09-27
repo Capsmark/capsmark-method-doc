@@ -2,96 +2,26 @@
 
 import { items } from '#/lib/items';
 import { CapsLogo } from '#/ui/caps-logo';
+
 import { MenuAlt2Icon, XIcon } from '@heroicons/react/solid';
 import clsx from 'clsx';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { MouseEvent, useState } from 'react';
 
 export function GlobalNav() {
-  // todo change later
   const [isOpen, setIsOpen] = useState(false);
   const close = () => setIsOpen(false);
-  // end todo here
-  const [activeItem, setActiveItem] = useState('capsmark');
 
-  useEffect(() => {
-    console.log(!!document);
-    console.log(typeof document);
-    console.log(document.getElementById('semi-root'));
-
-    if (
-      document &&
-      typeof document !== 'undefined' &&
-      document.getElementById('semi-root')
-    ) {
-      console.log('runs');
-
-      const observer = new MutationObserver(getAnchorPoints);
-      observer.observe(document.getElementById('semi-root')!, {
-        childList: true,
-        subtree: true,
-      });
-      window.addEventListener('scroll', handleScroll);
-    }
-  }, []);
-
-  const getAnchorPoints = () => {
-    if (typeof window !== 'undefined') {
-      const curScroll = window.scrollY - 100;
-      const viewPortHeight = Math.max(
-        document.documentElement.clientHeight,
-        window.innerHeight || 0,
-      );
-      for (const key in items) {
-        for (const secondKey in items[key].items) {
-          items[key].items[secondKey].range =
-            document
-              .getElementById(items[key].items[secondKey].id)!
-              .getBoundingClientRect().top + curScroll;
-        }
-      }
-      const bottom = document.body.offsetHeight;
-    }
-    handleScroll();
-  };
-
-  const handleScroll = () => {
-    if (typeof window !== 'undefined') {
-      const curPos = window.scrollY;
-      let curSection = null;
-
-      for (const section in items) {
-        for (const secondSection in items[section].items) {
-          curSection =
-            typeof items[section].items[secondSection].range !== null &&
-            items[section].items[secondSection].range! >= curPos
-              ? items[section].items[secondSection].id
-              : curSection;
-          if (curSection !== section) {
-            break;
-          }
-        }
-        if (curSection !== section) {
-          break;
-        }
-      }
-      if (curSection !== activeItem && curSection) {
-        setActiveItem(curSection);
-      }
-    }
-  };
-
-  const handleClick = (
-    event: React.MouseEvent<HTMLElement>,
-    target: string,
-  ) => {
+  const handleClick = (event: MouseEvent<HTMLElement>, target: string) => {
     event.preventDefault();
 
-    if (typeof window !== 'undefined') {
-      document
-        .getElementById(target)!
-        .scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    window.scrollTo({
+      top:
+        document.getElementById(target)!.getBoundingClientRect().top +
+        window.scrollY -
+        35,
+      behavior: 'smooth',
+    });
   };
 
   return (

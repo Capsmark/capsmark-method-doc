@@ -4,10 +4,6 @@ import { SectionsMain } from '#/ui/sections/sections-main';
 export default function Page() {
   return (
     <div className="space-y-8">
-      <h1 className="text-xl font-bold text-black" id="capsmark">
-        Capsmark
-      </h1>
-
       <div className="space-y-10 text-white">
         {items.map(({ name, items, id }) => {
           return (
