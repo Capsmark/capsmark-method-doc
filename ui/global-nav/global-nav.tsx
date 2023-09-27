@@ -9,8 +9,54 @@ import { useState } from 'react';
 import { GlobalNavItem } from './global-nav-item';
 
 export function GlobalNav() {
+  // todo change later
   const [isOpen, setIsOpen] = useState(false);
   const close = () => setIsOpen(false);
+  // end todo here
+
+  const handleScroll = () => {
+    if (typeof window !== 'undefined') {
+      const curPos = window.scrollY;
+      let curSection = null;
+
+      for (const section in items) {
+        // todo fix
+        curSection = items[section] >= curPos ? section : curSection;
+        if (curSection !== section) {
+          break;
+        }
+      }
+      if (curSection !== activeItem) {
+        setActiveItem(curSection);
+      }
+    }
+  };
+
+  const getAnchorPoints = () => {
+    if (typeof window !== 'undefined') {
+      const curScroll = window.scrollY - 100;
+      const viewPortHeight = Math.max(
+        document.documentElement.clientHeight,
+        window.innerHeight || 0,
+      );
+      for (const key in items) {
+        // todo fix
+        items[key] =
+          document.getElementById(key)!.getBoundingClientRect().top + curScroll;
+      }
+      const bottom = document.body.offsetHeight;
+    }
+    handleScroll();
+  };
+
+  const observer = new MutationObserver(getAnchorPoints);
+  if (typeof window !== 'undefined') {
+    observer.observe(document.getElementById('root')!, {
+      childList: true,
+      subtree: true,
+    });
+    window.addEventListener('scroll', handleScroll);
+  }
 
   return (
     <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-800 bg-black lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-800">
