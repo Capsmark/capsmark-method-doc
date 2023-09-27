@@ -5,7 +5,7 @@ import { CapsLogo } from '#/ui/caps-logo';
 import { MenuAlt2Icon, XIcon } from '@heroicons/react/solid';
 import clsx from 'clsx';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { GlobalNavItem } from './global-nav-item';
 
 export function GlobalNav() {
@@ -13,24 +13,28 @@ export function GlobalNav() {
   const [isOpen, setIsOpen] = useState(false);
   const close = () => setIsOpen(false);
   // end todo here
+  const [activeItem, setActiveItem] = useState('capsmark');
 
-  const handleScroll = () => {
-    if (typeof window !== 'undefined') {
-      const curPos = window.scrollY;
-      let curSection = null;
+  useEffect(() => {
+    console.log(!!document);
+    console.log(typeof document);
+    console.log(document.getElementById('semi-root'));
 
-      for (const section in items) {
-        // todo fix
-        curSection = items[section] >= curPos ? section : curSection;
-        if (curSection !== section) {
-          break;
-        }
-      }
-      if (curSection !== activeItem) {
-        setActiveItem(curSection);
-      }
+    if (
+      document &&
+      typeof document !== 'undefined' &&
+      document.getElementById('semi-root')
+    ) {
+      console.log('runs');
+
+      const observer = new MutationObserver(getAnchorPoints);
+      observer.observe(document.getElementById('semi-root')!, {
+        childList: true,
+        subtree: true,
+      });
+      window.addEventListener('scroll', handleScroll);
     }
-  };
+  }, []);
 
   const getAnchorPoints = () => {
     if (typeof window !== 'undefined') {
@@ -41,22 +45,43 @@ export function GlobalNav() {
       );
       for (const key in items) {
         // todo fix
-        items[key] =
-          document.getElementById(key)!.getBoundingClientRect().top + curScroll;
+        for (const secondKey in items[key].items) {
+          items[key].items[secondKey].range =
+            document
+              .getElementById(items[key].items[secondKey].id)!
+              .getBoundingClientRect().top + curScroll;
+        }
       }
       const bottom = document.body.offsetHeight;
     }
     handleScroll();
   };
 
-  const observer = new MutationObserver(getAnchorPoints);
-  if (typeof window !== 'undefined') {
-    observer.observe(document.getElementById('root')!, {
-      childList: true,
-      subtree: true,
-    });
-    window.addEventListener('scroll', handleScroll);
-  }
+  const handleScroll = () => {
+    if (typeof window !== 'undefined') {
+      const curPos = window.scrollY;
+      let curSection = null;
+
+      for (const section in items) {
+        for (const secondSection in items[section].items) {
+          curSection =
+            typeof items[section].items[secondSection].range !== null &&
+            items[section].items[secondSection].range! >= curPos
+              ? items[section].items[secondSection].id
+              : curSection;
+          if (curSection !== section) {
+            break;
+          }
+        }
+        if (curSection !== section) {
+          break;
+        }
+      }
+      if (curSection !== activeItem && curSection) {
+        setActiveItem(curSection);
+      }
+    }
+  };
 
   return (
     <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-800 bg-black lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-800">
@@ -107,8 +132,12 @@ export function GlobalNav() {
 
                 <div className="space-y-1">
                   {items.map((item, index) => (
-                    // todo add anchor link here
-                    <GlobalNavItem key={index} item={item} close={close} />
+                    <GlobalNavItem
+                      key={index}
+                      item={item}
+                      close={close}
+                      active={activeItem === item.id ? true : false}
+                    />
                   ))}
                 </div>
               </div>

@@ -8,9 +8,11 @@ import { useEffect, useState } from 'react';
 export function GlobalNavItem({
   item,
   close,
+  active,
 }: {
   item: Item;
   close: () => false | void;
+  active: boolean;
 }) {
   const [anchorTarget, setAnchorTarget] = useState<HTMLElement | null>(null);
   /*
@@ -31,9 +33,6 @@ export function GlobalNavItem({
       anchorTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
-  // todo add logic to check if is active
-  const isActive = true;
-
   return (
     <Link
       href={`/#${item.id}`}
@@ -41,8 +40,8 @@ export function GlobalNavItem({
       className={clsx(
         'block rounded-md px-3 py-2 text-sm font-medium hover:text-gray-300',
         {
-          'text-gray-400 hover:bg-gray-800': !isActive,
-          'text-white': isActive,
+          'text-gray-400 hover:bg-gray-800': !active,
+          'text-white': active,
         },
       )}
     >
