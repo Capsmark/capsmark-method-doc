@@ -14,23 +14,24 @@
     "ms": "3.0.0-canary.1",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "sharp": "^0.32.6"
   },
   "devDependencies": {
-    "typescript": "latest",
-    "@types/ms": "0.7.31",
-    "@types/react": "latest",
-    "@types/node": "latest",
-    "@types/react-dom": "latest",
-    "autoprefixer": "latest",
-    "lint-staged": "13.1.0",
-    "postcss": "latest",
-    "tailwindcss": "latest",
-    "eslint": "latest",
-    "eslint-config-next": "latest",
     "@tailwindcss/forms": "0.5.3",
     "@tailwindcss/typography": "0.5.9",
+    "@types/ms": "0.7.31",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "lint-staged": "13.1.0",
+    "postcss": "latest",
     "prettier": "2.8.1",
-    "prettier-plugin-tailwindcss": "0.2.1"
+    "prettier-plugin-tailwindcss": "0.2.1",
+    "tailwindcss": "latest",
+    "typescript": "latest"
   }
 }
