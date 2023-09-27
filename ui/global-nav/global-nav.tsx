@@ -1,11 +1,11 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { items } from '#/lib/items';
 import { CapsLogo } from '#/ui/caps-logo';
 import { MenuAlt2Icon, XIcon } from '@heroicons/react/solid';
 import clsx from 'clsx';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 import { GlobalNavItem } from './global-nav-item';
 
 export function GlobalNav() {
@@ -44,7 +44,6 @@ export function GlobalNav() {
         window.innerHeight || 0,
       );
       for (const key in items) {
-        // todo fix
         for (const secondKey in items[key].items) {
           items[key].items[secondKey].range =
             document
@@ -80,6 +79,19 @@ export function GlobalNav() {
       if (curSection !== activeItem && curSection) {
         setActiveItem(curSection);
       }
+    }
+  };
+
+  const handleClick = (
+    event: React.MouseEvent<HTMLElement>,
+    target: string,
+  ) => {
+    event.preventDefault();
+
+    if (typeof window !== 'undefined') {
+      document
+        .getElementById(target)!
+        .scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
@@ -123,10 +135,13 @@ export function GlobalNav() {
         })}
       >
         <nav className="space-y-6 px-2 pb-24 pt-5">
-          {items.map(({ name, items }) => {
+          {items.map(({ name, items, id }) => {
             return (
               <div key={name}>
-                <div className="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400/80">
+                <div
+                  className="mb-2 cursor-pointer px-3 text-xs font-semibold uppercase tracking-wider text-gray-400/80 "
+                  onClick={(e) => handleClick(e, id)}
+                >
                   <div>{name}</div>
                 </div>
 
