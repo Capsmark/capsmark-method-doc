@@ -27,12 +27,14 @@ import chart26 from '/public/charts/chart26.jpg';
 import chart27 from '/public/charts/chart27.jpg';
 import blank from '/public/charts/blank.png'
 
+
 export type Item = {
   name: string;
   id: string;
   range: number | null;
   paragraphs?: string[];
   picture?: Picture[];
+  links?: Links[]
 };
 
 type Picture = {
@@ -48,6 +50,11 @@ type List = {
   ul?: boolean;
   listItems: string[];
 };
+
+type Links = {
+  url: string;
+  text: string;
+}
 
 // todo place these types into seprate file
 export type ItemsList = {
@@ -229,6 +236,22 @@ export const items: ItemsList[] = [
         ]
       },
       {
+        name: 'Signature Fund Performance Report',
+        id: 'signature-performance-report',
+        range: null,
+        links: [
+          {
+            url:
+              '/Signature_Fund_February_2023_April_2023_Performance_report_2.pdf',
+            text: 'Report Example'
+          },
+          {
+            url: 'https://capsmark.pages.dev/',
+            text: 'Capsmark Dashboard'
+          }
+        ]
+      },
+      {
         name: 'Deep-Alpha Fund',
         id: 'deep-alpha',
         range: null,
@@ -252,7 +275,7 @@ export const items: ItemsList[] = [
             url: chart12,
           }
         ]
-      }
+      },
     ],
   },
   {
