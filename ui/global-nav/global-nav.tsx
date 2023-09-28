@@ -47,7 +47,7 @@ export function GlobalNav() {
       >
         <div className="group flex w-full items-center gap-x-2.5">
           <div className="h-10 w-10 rounded-full border border-black/20 p-2 group-hover:border-black/60">
-            <Image src={capsLogo} />
+            <Image src={capsLogo} alt="capsmark" />
           </div>
 
           <h3 className="font-semibold tracking-wide text-gray-600 group-hover:text-gray-900">
