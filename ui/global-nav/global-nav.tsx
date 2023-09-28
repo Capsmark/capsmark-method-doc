@@ -2,7 +2,8 @@
 
 import { items } from '#/lib/items';
 import useItemStore from '#/stores/width.store';
-import { CapsLogo } from '#/ui/caps-logo';
+import capsLogo from '/public/logo.svg';
+import Image from 'next/image';
 
 import { MenuAlt2Icon, XIcon } from '@heroicons/react/solid';
 import clsx from 'clsx';
@@ -46,7 +47,7 @@ export function GlobalNav() {
       >
         <div className="group flex w-full items-center gap-x-2.5">
           <div className="h-10 w-10 rounded-full border border-black/20 p-2 group-hover:border-black/60">
-            <CapsLogo />
+            <Image src={capsLogo} />
           </div>
 
           <h3 className="font-semibold tracking-wide text-gray-600 group-hover:text-gray-900">

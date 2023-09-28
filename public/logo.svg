@@ -1,12 +1,23 @@
-<svg viewBox="-2.16 -2.16 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<circle cx="2.855" cy="2.88" r="4.04" fill="#000000" />
-
-	<path
-		d="M2.72 5.72l0.73 -1.36c0.03,-0.06 0.04,-0.13 0.02,-0.2l-1.12 -4.11c-0.02,-0.07 -0.11,-0.08 -0.14,-0.02l-2.2 4.1c-0.03,0.05 0.01,0.11 0.07,0.11l1.14 0c0.03,0 0.05,-0.02 0.07,-0.04l0.5 -0.93c0.03,-0.06 0.12,-0.05 0.14,0.02l0.65 2.4c0.02,0.07 0.11,0.08 0.14,0.02z"
-		fill="#FFFFFF"
-	/>
-	<path
-		d="M4.48 4.26l1.15 0c0.05,0 0.09,-0.05 0.07,-0.1l-0.94 -3.49c-0.02,-0.07 -0.11,-0.08 -0.14,-0.02l-0.73 1.36c-0.03,0.06 -0.04,0.13 -0.02,0.2l0.53 1.99c0.01,0.03 0.04,0.06 0.08,0.06z"
-		fill="#FFFFFF"
-	/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="49.838mm" height="50.3263mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 1113.87 1124.79"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:#003B70}
+    .fil0 {fill:#D8261C}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2916285187968">
+   <path class="fil0" d="M531.56 1116.8l141.83 -264.92c6.39,-11.93 7.97,-25.86 4.41,-38.92l-218.62 -801.81c-3.6,-13.19 -21.46,-15.21 -27.91,-3.16l-429.45 800.78c-5.39,10.07 1.9,22.25 13.33,22.25l221.85 0c5.58,0 10.69,-3.07 13.33,-7.98l97.66 -181.07c6.45,-12.05 24.32,-10.03 27.92,3.16l127.75 468.51c3.6,13.19 21.46,15.21 27.92,3.16z"/>
+   <path class="fil1" d="M873.98 831.1l224.73 0c9.99,0 17.25,-9.5 14.61,-19.13l-183.84 -680.64c-3.6,-13.22 -21.5,-15.24 -27.97,-3.16l-141.77 264.8c-6.41,11.97 -7.99,25.93 -4.42,39.03l104.03 387.94c1.8,6.59 7.78,11.16 14.62,11.16z"/>
+  </g>
+ </g>
 </svg>
