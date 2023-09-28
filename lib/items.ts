@@ -35,6 +35,7 @@ export type Item = {
   paragraphs?: string[];
   picture?: Picture[];
   links?: Links[]
+  complexList?: ComplexList[]
 };
 
 type Picture = {
@@ -54,6 +55,12 @@ type List = {
 type Links = {
   url: string;
   text: string;
+}
+
+type ComplexList = {
+  title: string;
+  items: string[];
+  afterParagraph?: string[]
 }
 
 // todo place these types into seprate file
@@ -541,41 +548,33 @@ export const items: ItemsList[] = [
         range: null,
         paragraphs: [
           `Our forward-looking strategy encompasses several dimensions:`
+        ],
+        complexList: [
+          {
+            title: 'Model Enhancements:',
+            items: [
+              `Our ambition extends beyond the present, as we aim to pioneer fully automated robo-advisory asset management. The envisioned 'bot of bots' will dynamically rebalance and manage assets, making decisions grounded in the track records of diverse models.`
+            ]
+          },
+          {
+            title: 'Augmenting Analytical and Predictive Capacities:',
+            items: [
+              `We're poised to harness the capabilities of Generative AIs, Transformers, and Large Language Models (LLMs). This integration addresses the current models' sentiment analysis and macroeconomic event interpretation limitations.`,
+              `Recognising the ever-increasing complexity of financial data, our commitment is to further our models' reach. Yet, the more intricate the problems, the greater the computational demand. Traditional computing mechanisms have their constraints. Thus, we are setting our sights on the quantum frontier. Leveraging the unparalleled processing prowess of quantum mechanics, which allows for simultaneous multi-state computations, we anticipate tasks that traditionally take millennia to be executable within mere moments.`
+            ]
+          },
+          {
+            title: 'Diversification into Other Sectors:',
+            items: [
+              `While details remain under strategic evaluation, our expansionary aspirations extend to multiple market segments and industries.`
+            ],
+            afterParagraph: [
+              `This blueprint reflects our ambitions and our unwavering dedication to innovation and excellence.`
+            ]
+          }
         ]
       },
-      {
-        name: 'Model Enhancements:',
-        id: 'future-model',
-        range: null,
-        paragraphs: [
-          `Our ambition extends beyond the present, as we aim to pioneer fully automated robo-advisory asset management. The envisioned 'bot of bots' will dynamically rebalance and manage assets, making decisions grounded in the track records of diverse models.`
-        ]
-      },
-      {
-        name: 'Augmenting Analytical and Predictive Capacities:',
-        id: 'future-capacity',
-        range: null,
-        paragraphs: [
-          `We're poised to harness the capabilities of Generative AIs, Transformers, and Large Language Models (LLMs). This integration addresses the current models' sentiment analysis and macroeconomic event interpretation limitations.`,
-          `Recognising the ever-increasing complexity of financial data, our commitment is to further our models' reach. Yet, the more intricate the problems, the greater the computational demand. Traditional computing mechanisms have their constraints. Thus, we are setting our sights on the quantum frontier. Leveraging the unparalleled processing prowess of quantum mechanics, which allows for simultaneous multi-state computations, we anticipate tasks that traditionally take millennia to be executable within mere moments.`,
-        ]
-      },
-      {
-        name: 'Diversification into Other Sectors:',
-        id: 'future-sectors',
-        range: null,
-        paragraphs: [
-          `While details remain under strategic evaluation, our expansionary aspirations extend to multiple market segments and industries.`
-        ]
-      },
-      {
-        name: '',
-        id: 'future-ending',
-        range: null,
-        paragraphs: [
-          `This blueprint reflects our ambitions and our unwavering dedication to innovation and excellence.`
-        ]
-      },
+
     ],
   },
 ]

@@ -48,6 +48,37 @@ export function SectionsMain({ item }: { item: Item }) {
             </div>
           );
         })}
+      <ol className="ml-8">
+        {item.complexList &&
+          item.complexList.map((cItem, index) => (
+            <li>
+              <div className="text-lg font-bold text-gray-900">
+                {index + 1}. {cItem.title}
+              </div>
+              <ol className="ml-6">
+                {cItem.items.map((lItem, index) => (
+                  <li>
+                    <div className="mt-2 flex">
+                      <div className="mr-2">
+                        {String.fromCharCode(index + 97)}.
+                      </div>
+                      {lItem}
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </li>
+          ))}
+      </ol>
+
+      {item.complexList &&
+        item.complexList.map(
+          (par) =>
+            par.afterParagraph &&
+            par.afterParagraph.map((paragraph) => {
+              return <p className="mb-4 mt-6">{paragraph} and herere</p>;
+            }),
+        )}
       <div className="mt-5 flex flex-row">
         {item.links &&
           item.links.map((l) => (
