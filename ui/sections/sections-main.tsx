@@ -50,6 +50,16 @@ export function SectionsMain({ item }: { item: Item }) {
             </div>
           );
         })}
+      <div className="mt-5 flex flex-row">
+        {item.links &&
+          item.links.map((l) => (
+            <a href={l.url} target="_blank">
+              <button className="mr-4 rounded border border-gray-400 bg-white px-4 py-2 font-semibold text-gray-800 shadow hover:bg-gray-100">
+                {l.text}
+              </button>
+            </a>
+          ))}
+      </div>
     </div>
   );
 }
