@@ -7,6 +7,11 @@ import Image from 'next/image';
 export function SectionsMain({ item }: { item: Item }) {
   return (
     <div className="mb-10 mt-10 text-sm font-medium">
+      {item.name && item.name !== '' && (
+        <h3 className="text-lg font-medium uppercase text-gray-900">
+          {item.name}
+        </h3>
+      )}
       {item.paragraphs &&
         item.paragraphs.map((par) => <p className="mb-4 mt-6">{par}</p>)}
       {item.picture &&
