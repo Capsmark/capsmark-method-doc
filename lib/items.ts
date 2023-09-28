@@ -243,22 +243,6 @@ export const items: ItemsList[] = [
         ]
       },
       {
-        name: 'Signature Fund Performance Report',
-        id: 'signature-performance-report',
-        range: null,
-        links: [
-          {
-            url:
-              '/Signature_Fund_February_2023_April_2023_Performance_report_2.pdf',
-            text: 'Report Example'
-          },
-          {
-            url: 'https://capsmark.pages.dev/',
-            text: 'Capsmark Dashboard'
-          }
-        ]
-      },
-      {
         name: 'Deep-Alpha Fund',
         id: 'deep-alpha',
         range: null,
@@ -284,6 +268,28 @@ export const items: ItemsList[] = [
         ]
       },
     ],
+  },
+  {
+    name: 'Signature Fund Performance Report',
+    id: 'signature-report',
+    items: [
+      {
+        name: '',
+        id: 'signature-performance-report',
+        range: null,
+        links: [
+          {
+            url:
+              '/Signature_Fund_February_2023_April_2023_Performance_report_2.pdf',
+            text: 'View PDF'
+          },
+          {
+            url: 'https://capsmark.pages.dev/',
+            text: 'Capsmark Dashboard'
+          }
+        ]
+      },
+    ]
   },
   {
     name: 'S&P500 Multi-Transformer (Beta)',
