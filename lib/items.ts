@@ -259,7 +259,7 @@ export const items: ItemsList[] = [
             text: 'View PDF'
           },
           {
-            url: 'https://capsmark.pages.dev/',
+            url: 'https://dashboard.capsmark.co.uk/',
             text: 'Capsmark Dashboard'
           }
         ]
