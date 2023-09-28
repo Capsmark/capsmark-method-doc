@@ -87,7 +87,7 @@ export const items: ItemsList[] = [
           `Both funds rely on our advanced quantitative algorithms, supported by current AI, and machine learning techniques. These algorithms process various data, including on-chain information, exchange metrics, and macroeconomic data. We carefully refine these data sources to monitor the cryptocurrency market closely, helping with thorough risk assessments and mitigation.`,
           `While our modus operandi echoes many peers in the hedge fund and asset management sphere, a defining hallmark sets us apart: our trust in artificial intelligence to helm tasks that traditionally challenge human capacities.`,
           `In our commitment to thorough validation, we compared our methodology to the benchmark of the S&P500, carefully removing features specific to Cryptocurrencies. Leveraging our expertise, we successfully refined our methodology to other key financial sectors, notably the stock market, using a decade's worth of data on the S&P 500. We've detailed these findings in the 'S&P 500 Multi-Transformers (Beta)' appendix. `,
-          `These results mainly showcase how adaptable our methodology is. To achieve a confidence level similar to our models in the cryptocurrency realm, a dedicated team would need to engage in deep research for at least six months to produce a reliable version.`,
+          `These findings highlight the versatility of our approach across various financial sectors. To match the confidence level of our cryptocurrency models, a specialized team would require a minimum of six months of intensive research to develop a dependable version.`,
         ],
       },
     ],
@@ -275,7 +275,7 @@ export const items: ItemsList[] = [
         id: 'da',
         range: null,
         paragraphs: [
-          `The Deep-Alpha Fund stands as Capsmark's pinnacle of high-risk investment vehicles. At its foundation, this fund intricately intertwines with the avant-garde TXFEE model, crafted to adeptly navigate the intricate nuances of the cryptocurrency market landscape. The foremost aspiration of Deep-Alpha is to mirror, with precision, the cryptocurrency market's trajectory during its bullish tenures, with an ambitious pursuit of a Beta nearing unity. It behoves potential investors to discern that, in stark contrast to Capsmark’s Signature Fund, the Deep-Alpha Fund bears a pronounced risk profile, with potential drawdowns that may eclipse 40%. Yet, in its essence, this fund is unyieldingly committed to amplifying profits amidst market ascents, positioning it as an alluring proposition for those investors with a penchant for robust returns in the mercurial domain of cryptocurrency.`,
+          `The Deep-Alpha Fund represents Capsmark's apex in high-risk investment strategies. It's fundamentally intertwined with the cutting-edge TXFEE model, designed specifically to navigate the complex dynamics of the cryptocurrency market. Deep-Alpha's primary goal is to accurately reflect the market's trajectory during its bullish phases, targeting a Beta close to one. It's crucial for investors to understand that, unlike Capsmark’s Signature Fund, Deep-Alpha has a heightened risk profile, with potential downturns exceeding 40%. However, the fund is steadfast in its commitment to maximising profits during market surges, making it an enticing option for investors seeking substantial returns in the volatile cryptocurrency arena.`,
         ],
         picture: [
           {
@@ -336,7 +336,7 @@ export const items: ItemsList[] = [
         id: 'multi-architecture',
         range: null,
         paragraphs: [
-          `At the core of our system lies a sophisticated architecture. We start by feeding mathematical describers and technical indicators into transformers. These transformers preprocess and enhance the data, enabling a deeper understanding of market dynamics. Subsequently, the transformed data flows into two deep neural network decision-maker systems that generate precise trading signals.`
+          `Our system is anchored by an advanced architecture. It begins with the input of mathematical describers and technical indicators into transformers. These transformers refine and augment the data, facilitating a more nuanced grasp of market trends. This enhanced data then feeds into two deep neural networks, which produce precise trading signals.`
         ]
       },
       {
@@ -344,7 +344,7 @@ export const items: ItemsList[] = [
         id: 'multi-collection',
         range: null,
         paragraphs: [
-          `Our system thrives on high-quality data. We meticulously collect data from various sources, ensuring accuracy and completeness. This data forms the lifeblood of our trading models, facilitating rigorous training and testing.`
+          `Our system hinges on premium data. We diligently source information from diverse origins, prioritising accuracy and comprehensiveness. This data is integral to our trading models, underpinning robust training and testing processes.`
         ]
       },
       {
@@ -352,7 +352,7 @@ export const items: ItemsList[] = [
         id: 'multi-describers',
         range: null,
         paragraphs: [
-          `Fourier and Maclaurin series to serve as our mathematical describers. They unravel intricate patterns and behaviours within financial data, empowering our system to make sense of complex market movements.`
+          `We use the Fourier and Maclaurin series as our mathematical describers. These tools decode complex patterns and tendencies within financial data, enabling our system to interpret intricate market shifts.`
         ]
       },
       {
@@ -360,7 +360,7 @@ export const items: ItemsList[] = [
         id: 'multi-indicators',
         range: null,
         paragraphs: [
-          `Our arsenal includes an array of technical indicators and oscillators. These indicators provide crucial insights into market trends, volatility, and potential opportunities.`
+          `Our toolkit comprises a variety of technical indicators and oscillators. These tools offer vital perspectives on market trajectories, volatility, and prospective opportunities.`
         ]
       },
       {
@@ -368,7 +368,7 @@ export const items: ItemsList[] = [
         id: 'multi-transformers',
         range: null,
         paragraphs: [
-          `The transformers play a pivotal role in data preprocessing. They enrich the data with relevant features, enabling our system to make well-informed predictions.`
+          `Transformers in data preprocessing refine raw data for machine learning. They filter noise, enhance information, and create optimised features, ensuring the models receive data in its best form for accurate predictions.`
         ]
       },
       {
@@ -376,7 +376,7 @@ export const items: ItemsList[] = [
         id: 'multi-neural',
         range: null,
         paragraphs: [
-          `The heart of our system, the deep neural network decision-makers, receive the transformed data. They analyse, learn, and rapidly generate trading signals, translating data-driven insights into profitable actions.`
+          `At the core of our system are the deep neural network decision-makers, which are sophisticated machine learning models. Once they receive the transformed and optimized data, these networks delve deep into the data's intricacies to detect patterns, trends, and anomalies. Through rigorous analysis and learning, they swiftly produce trading signals. Essentially, these decision-makers act as the bridge between raw, data-driven insights and actionable, profitable trading decisions, ensuring our strategies are informed and effective.`
         ]
       },
       {
@@ -392,7 +392,7 @@ export const items: ItemsList[] = [
         id: 'multi-results',
         range: null,
         paragraphs: [
-          `During testing, our system demonstrated remarkable prowess, capturing approximately $3,600 in profit within the context of the S&P 500. This achievement is particularly impressive, considering the daily price fluctuation of nearly $7,000. Key metrics, including profit, drawdown, Sharpe ratio, and alpha/beta, underscore the system's prowess.`
+          `In testing, our system exhibited exceptional performance, securing a profit of approximately $3,600 within the scope of the S&P 500. This is notable, especially when juxtaposed against daily price fluctuations nearing $7,000. Core metrics such as profit, drawdown, Sharpe ratio, and alpha/beta further emphasize the system's effectiveness.`
         ]
       },
       {
@@ -400,7 +400,7 @@ export const items: ItemsList[] = [
         id: 'multi-adaptability',
         range: null,
         paragraphs: [
-          `One of our system's standout features is its adaptability. It can seamlessly transition to different assets and markets, consistently delivering positive results. Its versatility makes it a valuable tool for investors and institutions seeking a competitive edge.`
+          `A hallmark of our system is its flexibility. It effortlessly adapts to various assets and markets, consistently yielding favourable outcomes. This adaptability positions it as a prized asset for investors and institutions aiming for a competitive advantage.`
         ]
       },
       {
@@ -408,7 +408,7 @@ export const items: ItemsList[] = [
         id: 'multi-conclusion',
         range: null,
         paragraphs: [
-          `The multi-transformer trading system redefines algorithmic trading. By melding mathematical descriptors, technical indicators, and deep neural networks, we've crafted a solution that offers adaptability and profitability in today's dynamic financial landscape.`
+          `Our multi-transformer trading approach offers a fresh perspective on algorithmic trading. By combining mathematical descriptors, technical indicators, and deep neural networks, we've developed a method that navigates the changing financial landscape with adaptability and efficiency.`
         ]
       },
       {
@@ -416,7 +416,7 @@ export const items: ItemsList[] = [
         id: 'multi-future',
         range: null,
         paragraphs: [
-          `Our journey continues with the pursuit of excellence. Future work includes refining strategies, expanding adaptability, and exploring new frontiers in algorithmic trading.`
+          `Our journey is an ongoing commitment to the relentless pursuit of excellence in the realm of trading. As we move forward, our roadmap is clear: refining our existing strategies to further optimize outcomes, enhancing the system's adaptability to seamlessly integrate with a broader range of assets and markets, and venturing into untapped territories within algorithmic trading. Every step we take is with an eye on innovation and elevating our benchmarks.`
         ],
         picture: [
           {
@@ -451,7 +451,7 @@ export const items: ItemsList[] = [
         name: 'Description:',
         id: 'eco-description',
         range: null,
-        paragraphs: [`Developed Gradient Boosting Regression model used for forecasting the Core Consumer Price Index (CPI). The model is trained on historical CPI data and attempts to predict future CPI values based on relevant features.`],
+        paragraphs: [`We embarked on a project to develop a Gradient Boosting Regression model specifically tailored for forecasting the Core Consumer Price Index (CPI). Drawing from a rich database, the model is trained on an extensive collection of historical CPI data. This foundational training equips the model with a profound understanding of past trends and fluctuations. Our aim is to utilize this knowledge to make informed predictions about future CPI values. The model takes into account various relevant features, meticulously analyzing them to generate forecasts that are both precise and actionable for economic planning.`],
       },
       {
         name: 'Results:',
@@ -461,9 +461,7 @@ export const items: ItemsList[] = [
           {
             url: chart22,
             firstSetOfParagraphs: [
-              `The CPI forecasting model has proven to be highly successful in providing accurate and reliable forecasts for the Core Consumer Price Index. Not only has it demonstrated its ability to make precise predictions, but it has also yielded valuable insights through its feature importance analysis. By identifying and ranking the significance of each feature in the forecasting process, we gain a deeper understanding of the factors influencing CPI Fluctuations.`,
-              `This model has undergone enhancements, including incorporating various features and a slightly modified approach.`,
-
+              `Our CPI forecasting model has consistently delivered accurate Core Consumer Price Index projections. Beyond its precision in predictions, the model also offers insightful feature importance analysis, shedding light on the key factors driving CPI fluctuations. By ranking the relevance of each feature, we obtain a clearer picture of the underlying influences on CPI changes. Over time, we've fine-tuned this model, introducing a range of additional features and subtly modifying its approach.`,
             ]
           }
         ]
@@ -477,7 +475,7 @@ export const items: ItemsList[] = [
         name: 'Description:',
         id: 'eco-prediction-description',
         range: null,
-        paragraphs: [`In this project, a state-of-the-art Long Short-Term Memory (LSTM) model was developed to predict and identify economic recessions accurately. The model was trained on a diverse set of economic metrics to capture the complex temporal patterns and dependencies present in economic data.`],
+        paragraphs: [`In this project's scope, we took the initiative to create a cutting-edge Long Short-Term Memory (LSTM) model, specifically aimed at accurately predicting and pinpointing economic recessions. LSTMs, being a subclass of recurrent neural networks, excel in tasks that require learning from sequences, making them ideal for analysing time-series data like economic indicators. Our model was rigorously trained on a comprehensive array of economic metrics. This diverse dataset ensured the model had ample opportunity to identify and learn from the intricate temporal trends and interdependencies characterising economic data. As a result, our LSTM model is well-equipped to recognise early signs of economic downturns, giving policymakers and businesses a crucial lead time for preparation and response.`],
       },
       {
         name: 'Results:',
@@ -487,8 +485,8 @@ export const items: ItemsList[] = [
           {
             url: chart23,
             firstSetOfParagraphs: [
-              `The LSTM-based recession prediction model has demonstrated exceptional accuracy, and achieved a remarkable 98% success rate in forecasting economic recessions. Notably, it has outperformed existing methodologies commonly used in recession forecasting. By accurately capturing the intricate relationships within economic data, this research has the potential to provide invaluable insights into the dynamics of economic cycles and help stakeholders make well-informed decisions.`,
-              `Please note that several refinements have been implemented in the model, including the utilisation of enhanced features and a shortened prediction horizon to ensure improved accuracy in results.`,
+              `Our LSTM-based model for predicting recessions has done quite well, achieving a 98% success rate in its forecasts. It has shown better results than some other methods typically used for this purpose. By understanding the patterns in economic data, our research can offer insights into how economies change over time, helping decision-makers plan better.`,
+              `It's important to mention we've made some updates to the model, adding new details and focusing on shorter prediction periods to make sure our forecasts remain accurate.`,
             ]
           }
         ],
