@@ -36,7 +36,7 @@ export const Section: FC<ItemsList & { index: number }> = ({
   }, [ref]);
 
   return (
-    <section key={name} className="space-y-5">
+    <section key={name} className="space-y-5 px-2">
       <h2
         className="text-lg font-bold uppercase tracking-wider text-gray-900"
         id={id}
