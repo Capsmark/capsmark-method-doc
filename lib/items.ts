@@ -242,31 +242,6 @@ export const items: ItemsList[] = [
           }
         ]
       },
-      {
-        name: 'Deep-Alpha Fund',
-        id: 'deep-alpha',
-        range: null,
-        paragraphs: [
-          `The Deep-Alpha Fund stands as Capsmark's pinnacle of high-risk investment vehicles. At its foundation, this fund intricately intertwines with the avant-garde TXFEE model, crafted to adeptly navigate the intricate nuances of the cryptocurrency market landscape. The foremost aspiration of Deep-Alpha is to mirror, with precision, the cryptocurrency market's trajectory during its bullish tenures, with an ambitious pursuit of a Beta nearing unity. It behoves potential investors to discern that, in stark contrast to Capsmark’s Signature Fund, the Deep-Alpha Fund bears a pronounced risk profile, with potential drawdowns that may eclipse 40%. Yet, in its essence, this fund is unyieldingly committed to amplifying profits amidst market ascents, positioning it as an alluring proposition for those investors with a penchant for robust returns in the mercurial domain of cryptocurrency.`,
-        ],
-        picture: [
-          {
-            url: chart13,
-            firstSetOfParagraphs: [
-              `The heatmap image above represents how TXFEE sees the Ethereum price’s reserved risk over time. (Red: Higher risk, Green: Lower risk)`,
-            ]
-          },
-          {
-            url: chart14,
-            firstSetOfParagraphs: [
-              `Given the TXFEE model, implementing a simple trading strategy using some RL and NN algorithms result in over 500% ROI within a 3-year interval executing only six trades.`,
-            ]
-          },
-          {
-            url: chart12,
-          }
-        ]
-      },
     ],
   },
   {
@@ -286,6 +261,37 @@ export const items: ItemsList[] = [
           {
             url: 'https://capsmark.pages.dev/',
             text: 'Capsmark Dashboard'
+          }
+        ]
+      },
+    ]
+  },
+  {
+    name: 'Deep-Alpha Fund',
+    id: 'deep-alpha',
+    items: [
+      {
+        name: '',
+        id: 'da',
+        range: null,
+        paragraphs: [
+          `The Deep-Alpha Fund stands as Capsmark's pinnacle of high-risk investment vehicles. At its foundation, this fund intricately intertwines with the avant-garde TXFEE model, crafted to adeptly navigate the intricate nuances of the cryptocurrency market landscape. The foremost aspiration of Deep-Alpha is to mirror, with precision, the cryptocurrency market's trajectory during its bullish tenures, with an ambitious pursuit of a Beta nearing unity. It behoves potential investors to discern that, in stark contrast to Capsmark’s Signature Fund, the Deep-Alpha Fund bears a pronounced risk profile, with potential drawdowns that may eclipse 40%. Yet, in its essence, this fund is unyieldingly committed to amplifying profits amidst market ascents, positioning it as an alluring proposition for those investors with a penchant for robust returns in the mercurial domain of cryptocurrency.`,
+        ],
+        picture: [
+          {
+            url: chart13,
+            firstSetOfParagraphs: [
+              `The heatmap image above represents how TXFEE sees the Ethereum price’s reserved risk over time. (Red: Higher risk, Green: Lower risk)`,
+            ]
+          },
+          {
+            url: chart14,
+            firstSetOfParagraphs: [
+              `Given the TXFEE model, implementing a simple trading strategy using some RL and NN algorithms result in over 500% ROI within a 3-year interval executing only six trades.`,
+            ]
+          },
+          {
+            url: chart12,
           }
         ]
       },
