@@ -12,6 +12,12 @@ export default {
   },
   darkMode: 'class',
   theme: {
+    fontSize: {
+      sm: ['16px', '22px'],
+      base: ['18px', '26px'],
+      lg: ['22px', '30px'],
+      xl: ['26px', '34px'],
+    },
     extend: {
       colors: {
         gray: colors.zinc,

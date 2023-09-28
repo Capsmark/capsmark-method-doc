@@ -87,7 +87,7 @@ export function GlobalNav() {
               <div key={name}>
                 <div
                   className={clsx(
-                    ' text-gray-6W00 mb-2 cursor-pointer rounded-md px-3 py-2 text-xs font-bold uppercase tracking-wider ',
+                    ' text-gray-6W00 mb-2 cursor-pointer rounded-md px-3 py-2 font-bold uppercase tracking-wider ',
                     {
                       'text-gray-600 hover:bg-gray-500 hover:text-white':
                         !isActive,
@@ -95,6 +95,9 @@ export function GlobalNav() {
                     },
                   )}
                   onClick={(e) => handleClick(e, id)}
+                  style={{
+                    fontSize: '12px',
+                  }}
                 >
                   <div>{name}</div>
                 </div>
