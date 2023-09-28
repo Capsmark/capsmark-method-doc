@@ -43,7 +43,7 @@ export const items: ItemsList[] = [
     id: 'story',
     items: [
       {
-        name: 'overview',
+        name: '',
         id: 'capsmark-overview',
         range: null,
         paragraphs: [
@@ -64,7 +64,7 @@ export const items: ItemsList[] = [
     id: 'signature',
     items: [
       {
-        name: 'overview',
+        name: '',
         id: 'signature-overview',
         range: null,
         paragraphs: [
