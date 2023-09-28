@@ -76,7 +76,7 @@ export function SectionsMain({ item }: { item: Item }) {
           (par) =>
             par.afterParagraph &&
             par.afterParagraph.map((paragraph) => {
-              return <p className="mb-4 mt-6">{paragraph} and herere</p>;
+              return <p className="mb-4 mt-6">{paragraph}</p>;
             }),
         )}
       <div className="mt-5 flex flex-row">
