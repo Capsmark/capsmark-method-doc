@@ -25,8 +25,8 @@ import chart24 from '/public/charts/chart24.jpg';
 import chart25 from '/public/charts/chart25.jpg';
 import chart26 from '/public/charts/chart26.jpg';
 import chart27 from '/public/charts/chart27.jpg';
-import blank from '/public/charts/blank.png'
-
+import blank from '/public/charts/blank.png';
+import last from '/public/charts/last.png';
 
 export type Item = {
   name: string;
@@ -34,8 +34,8 @@ export type Item = {
   range: number | null;
   paragraphs?: string[];
   picture?: Picture[];
-  links?: Links[]
-  complexList?: ComplexList[]
+  links?: Links[];
+  complexList?: ComplexList[];
 };
 
 type Picture = {
@@ -55,13 +55,13 @@ type List = {
 type Links = {
   url: string;
   text: string;
-}
+};
 
 type ComplexList = {
   title: string;
   items: string[];
-  afterParagraph?: string[]
-}
+  afterParagraph?: string[];
+};
 
 // todo place these types into seprate file
 export type ItemsList = {
@@ -206,12 +206,12 @@ export const items: ItemsList[] = [
         ],
         picture: [
           {
-            url: chart18
+            url: chart18,
           },
           {
-            url: chart17
-          }
-        ]
+            url: chart17,
+          },
+        ],
       },
       {
         name: 'MACD + Model:',
@@ -235,12 +235,12 @@ export const items: ItemsList[] = [
               `Instead, we capitalised on its real-time risk Measurement, establishing a threshold to sift through the generated signals and promptly conclude open positions upon the model's recognition of trend reversals. Notably, we implemented this approach solely for Short selling signals. We also did not subject the strategy to optimisation or hyperparameter tuning.`,
               `Please be aware: This involves straightforward backtesting under optimal conditions without accounting for fee reductions, funding fees, or price slippage. The strategy's backtesting on a daily interval somewhat diminishes the model’s precision, as it relies on intraday calculations to confirm its signals.`,
               `Future: Building on our foundational expertise, we have seamlessly incorporated eight AI engines dedicated to meticulously processing billions of data points. With our track record of relentless innovation, we envision the next phase encompassing comprehensive advancements to the engine. Our overarching ambition is to bolster its precision and broaden its applicability across various asset classes and market sectors.`,
-            ]
+            ],
           },
           {
-            url: chart8
-          }
-        ]
+            url: chart8,
+          },
+        ],
       },
     ],
   },
@@ -254,17 +254,16 @@ export const items: ItemsList[] = [
         range: null,
         links: [
           {
-            url:
-              '/Signature_Fund_February_2023_April_2023_Performance_report_2.pdf',
-            text: 'View PDF'
+            url: '/Signature_Fund_February_2023_April_2023_Performance_report_2.pdf',
+            text: 'View PDF',
           },
           {
             url: 'https://dashboard.capsmark.co.uk/',
-            text: 'Capsmark Dashboard'
-          }
-        ]
+            text: 'Capsmark Dashboard',
+          },
+        ],
       },
-    ]
+    ],
   },
   {
     name: 'Deep-Alpha Fund',
@@ -282,20 +281,20 @@ export const items: ItemsList[] = [
             url: chart13,
             firstSetOfParagraphs: [
               `The heatmap image above represents how TXFEE sees the Ethereum price’s reserved risk over time. (Red: Higher risk, Green: Lower risk)`,
-            ]
+            ],
           },
           {
             url: chart14,
             firstSetOfParagraphs: [
               `Given the TXFEE model, implementing a simple trading strategy using some RL and NN algorithms result in over 500% ROI within a 3-year interval executing only six trades.`,
-            ]
+            ],
           },
           {
             url: chart12,
-          }
-        ]
+          },
+        ],
       },
-    ]
+    ],
   },
   {
     name: 'S&P500 Multi-Transformer (Beta)',
@@ -314,7 +313,7 @@ export const items: ItemsList[] = [
           `In algorithmic trading, our pioneering system represents a paradigm shift. We've designed a multi-transformer trading system that harnesses the power of mathematical descriptors, technical indicators, and deep neural networks to predict asset prices and generate trading signals.`,
           `Problem Statement:`,
           `Financial markets are characterised by volatility, complexity, and the need for timely decision-making. Our system addresses these challenges by leveraging mathematical descriptors like the Fourier and Maclaurin series alongside a rich set of technical indicators and oscillators to make informed predictions.`,
-          `Objectives:`
+          `Objectives:`,
         ],
         picture: [
           {
@@ -325,105 +324,105 @@ export const items: ItemsList[] = [
                 listItems: [
                   `Develop a robust and adaptable trading system capable of handling diverse assets.`,
                   `Achieve consistent profit generation while managing risk effectively.`,
-                ]
-              }
-            ]
-          }
-        ]
+                ],
+              },
+            ],
+          },
+        ],
       },
       {
         name: 'System Architecture:',
         id: 'multi-architecture',
         range: null,
         paragraphs: [
-          `Our system is anchored by an advanced architecture. It begins with the input of mathematical describers and technical indicators into transformers. These transformers refine and augment the data, facilitating a more nuanced grasp of market trends. This enhanced data then feeds into two deep neural networks, which produce precise trading signals.`
-        ]
+          `Our system is anchored by an advanced architecture. It begins with the input of mathematical describers and technical indicators into transformers. These transformers refine and augment the data, facilitating a more nuanced grasp of market trends. This enhanced data then feeds into two deep neural networks, which produce precise trading signals.`,
+        ],
       },
       {
         name: 'Data Collection:',
         id: 'multi-collection',
         range: null,
         paragraphs: [
-          `Our system hinges on premium data. We diligently source information from diverse origins, prioritising accuracy and comprehensiveness. This data is integral to our trading models, underpinning robust training and testing processes.`
-        ]
+          `Our system hinges on premium data. We diligently source information from diverse origins, prioritising accuracy and comprehensiveness. This data is integral to our trading models, underpinning robust training and testing processes.`,
+        ],
       },
       {
         name: 'Mathematical Describers:',
         id: 'multi-describers',
         range: null,
         paragraphs: [
-          `We use the Fourier and Maclaurin series as our mathematical describers. These tools decode complex patterns and tendencies within financial data, enabling our system to interpret intricate market shifts.`
-        ]
+          `We use the Fourier and Maclaurin series as our mathematical describers. These tools decode complex patterns and tendencies within financial data, enabling our system to interpret intricate market shifts.`,
+        ],
       },
       {
         name: 'Technical Indicators:',
         id: 'multi-indicators',
         range: null,
         paragraphs: [
-          `Our toolkit comprises a variety of technical indicators and oscillators. These tools offer vital perspectives on market trajectories, volatility, and prospective opportunities.`
-        ]
+          `Our toolkit comprises a variety of technical indicators and oscillators. These tools offer vital perspectives on market trajectories, volatility, and prospective opportunities.`,
+        ],
       },
       {
         name: 'Transformers:',
         id: 'multi-transformers',
         range: null,
         paragraphs: [
-          `Transformers in data preprocessing refine raw data for machine learning. They filter noise, enhance information, and create optimised features, ensuring the models receive data in its best form for accurate predictions.`
-        ]
+          `Transformers in data preprocessing refine raw data for machine learning. They filter noise, enhance information, and create optimised features, ensuring the models receive data in its best form for accurate predictions.`,
+        ],
       },
       {
         name: 'Deep Neural Networks:',
         id: 'multi-neural',
         range: null,
         paragraphs: [
-          `At the core of our system are the deep neural network decision-makers, which are sophisticated machine learning models. Once they receive the transformed and optimized data, these networks delve deep into the data's intricacies to detect patterns, trends, and anomalies. Through rigorous analysis and learning, they swiftly produce trading signals. Essentially, these decision-makers act as the bridge between raw, data-driven insights and actionable, profitable trading decisions, ensuring our strategies are informed and effective.`
-        ]
+          `At the core of our system are the deep neural network decision-makers, which are sophisticated machine learning models. Once they receive the transformed and optimized data, these networks delve deep into the data's intricacies to detect patterns, trends, and anomalies. Through rigorous analysis and learning, they swiftly produce trading signals. Essentially, these decision-makers act as the bridge between raw, data-driven insights and actionable, profitable trading decisions, ensuring our strategies are informed and effective.`,
+        ],
       },
       {
         name: 'Training and Testing:',
         id: 'multi-testing',
         range: null,
         paragraphs: [
-          `Our system undergoes rigorous training and testing phases to ensure robustness and reliability. These processes validate its performance in real-world trading scenarios.`
-        ]
+          `Our system undergoes rigorous training and testing phases to ensure robustness and reliability. These processes validate its performance in real-world trading scenarios.`,
+        ],
       },
       {
         name: 'Performance Results:',
         id: 'multi-results',
         range: null,
         paragraphs: [
-          `In testing, our system exhibited exceptional performance, securing a profit of approximately $3,600 within the scope of the S&P 500. This is notable, especially when juxtaposed against daily price fluctuations nearing $7,000. Core metrics such as profit, drawdown, Sharpe ratio, and alpha/beta further emphasize the system's effectiveness.`
-        ]
+          `In testing, our system exhibited exceptional performance, securing a profit of approximately $3,600 within the scope of the S&P 500. This is notable, especially when juxtaposed against daily price fluctuations nearing $7,000. Core metrics such as profit, drawdown, Sharpe ratio, and alpha/beta further emphasize the system's effectiveness.`,
+        ],
       },
       {
         name: 'Adaptability and Generalization:',
         id: 'multi-adaptability',
         range: null,
         paragraphs: [
-          `A hallmark of our system is its flexibility. It effortlessly adapts to various assets and markets, consistently yielding favourable outcomes. This adaptability positions it as a prized asset for investors and institutions aiming for a competitive advantage.`
-        ]
+          `A hallmark of our system is its flexibility. It effortlessly adapts to various assets and markets, consistently yielding favourable outcomes. This adaptability positions it as a prized asset for investors and institutions aiming for a competitive advantage.`,
+        ],
       },
       {
         name: 'Conclusion:',
         id: 'multi-conclusion',
         range: null,
         paragraphs: [
-          `Our multi-transformer trading approach offers a fresh perspective on algorithmic trading. By combining mathematical descriptors, technical indicators, and deep neural networks, we've developed a method that navigates the changing financial landscape with adaptability and efficiency.`
-        ]
+          `Our multi-transformer trading approach offers a fresh perspective on algorithmic trading. By combining mathematical descriptors, technical indicators, and deep neural networks, we've developed a method that navigates the changing financial landscape with adaptability and efficiency.`,
+        ],
       },
       {
         name: 'Future Work:',
         id: 'multi-future',
         range: null,
         paragraphs: [
-          `Our journey is an ongoing commitment to the relentless pursuit of excellence in the realm of trading. As we move forward, our roadmap is clear: refining our existing strategies to further optimize outcomes, enhancing the system's adaptability to seamlessly integrate with a broader range of assets and markets, and venturing into untapped territories within algorithmic trading. Every step we take is with an eye on innovation and elevating our benchmarks.`
+          `Our journey is an ongoing commitment to the relentless pursuit of excellence in the realm of trading. As we move forward, our roadmap is clear: refining our existing strategies to further optimize outcomes, enhancing the system's adaptability to seamlessly integrate with a broader range of assets and markets, and venturing into untapped territories within algorithmic trading. Every step we take is with an eye on innovation and elevating our benchmarks.`,
         ],
         picture: [
           {
-            url: chart19
+            url: chart19,
           },
           {
-            url: chart20
+            url: chart20,
           },
           {
             url: chart21,
@@ -432,9 +431,9 @@ export const items: ItemsList[] = [
               `Sharpe Ratio: 4.396366447568421`,
               `Alpha: 10.254386591095681`,
               `Beta: 0.031041198471369467`,
-            ]
-          }
-        ]
+            ],
+          },
+        ],
       },
     ],
   },
@@ -451,7 +450,9 @@ export const items: ItemsList[] = [
         name: 'Description:',
         id: 'eco-description',
         range: null,
-        paragraphs: [`We embarked on a project to develop a Gradient Boosting Regression model specifically tailored for forecasting the Core Consumer Price Index (CPI). Drawing from a rich database, the model is trained on an extensive collection of historical CPI data. This foundational training equips the model with a profound understanding of past trends and fluctuations. Our aim is to utilize this knowledge to make informed predictions about future CPI values. The model takes into account various relevant features, meticulously analyzing them to generate forecasts that are both precise and actionable for economic planning.`],
+        paragraphs: [
+          `We embarked on a project to develop a Gradient Boosting Regression model specifically tailored for forecasting the Core Consumer Price Index (CPI). Drawing from a rich database, the model is trained on an extensive collection of historical CPI data. This foundational training equips the model with a profound understanding of past trends and fluctuations. Our aim is to utilize this knowledge to make informed predictions about future CPI values. The model takes into account various relevant features, meticulously analyzing them to generate forecasts that are both precise and actionable for economic planning.`,
+        ],
       },
       {
         name: 'Results:',
@@ -462,9 +463,9 @@ export const items: ItemsList[] = [
             url: chart22,
             firstSetOfParagraphs: [
               `Our CPI forecasting model has consistently delivered accurate Core Consumer Price Index projections. Beyond its precision in predictions, the model also offers insightful feature importance analysis, shedding light on the key factors driving CPI fluctuations. By ranking the relevance of each feature, we obtain a clearer picture of the underlying influences on CPI changes. Over time, we've fine-tuned this model, introducing a range of additional features and subtly modifying its approach.`,
-            ]
-          }
-        ]
+            ],
+          },
+        ],
       },
       {
         name: 'Recession Prediction Model:',
@@ -475,7 +476,9 @@ export const items: ItemsList[] = [
         name: 'Description:',
         id: 'eco-prediction-description',
         range: null,
-        paragraphs: [`In this project's scope, we took the initiative to create a cutting-edge Long Short-Term Memory (LSTM) model, specifically aimed at accurately predicting and pinpointing economic recessions. LSTMs, being a subclass of recurrent neural networks, excel in tasks that require learning from sequences, making them ideal for analysing time-series data like economic indicators. Our model was rigorously trained on a comprehensive array of economic metrics. This diverse dataset ensured the model had ample opportunity to identify and learn from the intricate temporal trends and interdependencies characterising economic data. As a result, our LSTM model is well-equipped to recognise early signs of economic downturns, giving policymakers and businesses a crucial lead time for preparation and response.`],
+        paragraphs: [
+          `In this project's scope, we took the initiative to create a cutting-edge Long Short-Term Memory (LSTM) model, specifically aimed at accurately predicting and pinpointing economic recessions. LSTMs, being a subclass of recurrent neural networks, excel in tasks that require learning from sequences, making them ideal for analysing time-series data like economic indicators. Our model was rigorously trained on a comprehensive array of economic metrics. This diverse dataset ensured the model had ample opportunity to identify and learn from the intricate temporal trends and interdependencies characterising economic data. As a result, our LSTM model is well-equipped to recognise early signs of economic downturns, giving policymakers and businesses a crucial lead time for preparation and response.`,
+        ],
       },
       {
         name: 'Results:',
@@ -487,8 +490,8 @@ export const items: ItemsList[] = [
             firstSetOfParagraphs: [
               `Our LSTM-based model for predicting recessions has done quite well, achieving a 98% success rate in its forecasts. It has shown better results than some other methods typically used for this purpose. By understanding the patterns in economic data, our research can offer insights into how economies change over time, helping decision-makers plan better.`,
               `It's important to mention we've made some updates to the model, adding new details and focusing on shorter prediction periods to make sure our forecasts remain accurate.`,
-            ]
-          }
+            ],
+          },
         ],
       },
       {
@@ -499,36 +502,35 @@ export const items: ItemsList[] = [
           `This index is a transparent and easily comprehensible tool for assessing the degree of risk linked to the Federal Reserve's interest rates. It achieves this by considering and analysing a range of treasury rates widely regarded as critical indicators within the financial market landscape.`,
           `To provide a bit more context, the Federal Reserve's interest rates play a pivotal role in the broader economy. These rates are the foundation upon which borrowing and lending costs are determined, influencing various facets of financial markets, from mortgage rates to corporate borrowing costs.`,
           `Now, as we delve deeper into the mechanics of this index, its colour-coded scale becomes particularly valuable. Moving towards the "red" end of the spectrum within this index is akin to sounding an alarm. It signifies an increasing level of concern and risk in relation to potential future Federal Reserve rate hikes.`,
-
         ],
         picture: [
           {
-            url: chart24
-          }
-        ]
+            url: chart24,
+          },
+        ],
       },
       {
         name: 'Econometric Analysis of Federal Funds Rate Movements',
         id: 'econometric-analysis',
         range: null,
         paragraphs: [
-          `Our polynomial logistic regression model examines the influence of econometric factors on Federal Reserve interest rate decisions. By analysing historical data and the interplay of economic indicators, we aim to uncover patterns that can help us understand how econometric changes impact the Federal Reserve's interest rate policy choices. This model is valuable for providing insights into the drivers behind monetary policy decisions and their potential implications for the economy, financial markets, and various stakeholders.`
+          `Our polynomial logistic regression model examines the influence of econometric factors on Federal Reserve interest rate decisions. By analysing historical data and the interplay of economic indicators, we aim to uncover patterns that can help us understand how econometric changes impact the Federal Reserve's interest rate policy choices. This model is valuable for providing insights into the drivers behind monetary policy decisions and their potential implications for the economy, financial markets, and various stakeholders.`,
         ],
         picture: [
           {
-            url: chart25
+            url: chart25,
           },
           {
-            url: chart26
-          }
-        ]
+            url: chart26,
+          },
+        ],
       },
       {
         name: 'Identifying U.S. Movements in Bitcoin',
         id: 'us-btc',
         range: null,
         paragraphs: [
-          `Our advanced statistical model, utilising the Coinbase Premium Index, has been meticulously developed to track Bitcoin price movements within the United States. Analysing historical data and employing cutting-edge statistical techniques can pinpoint fluctuations in U.S. Bitcoin prices compared to the global market. This model offers valuable insights to investors, regulators, and researchers, enhancing their ability to make informed decisions and understand the cryptocurrency market dynamics.`
+          `Our advanced statistical model, utilising the Coinbase Premium Index, has been meticulously developed to track Bitcoin price movements within the United States. Analysing historical data and employing cutting-edge statistical techniques can pinpoint fluctuations in U.S. Bitcoin prices compared to the global market. This model offers valuable insights to investors, regulators, and researchers, enhancing their ability to make informed decisions and understand the cryptocurrency market dynamics.`,
         ],
         picture: [
           {
@@ -540,12 +542,12 @@ export const items: ItemsList[] = [
                   `Green dots indicate buying pressure from the U.S.`,
                   `Blue dots indicate selling pressure from the U.S.`,
                   `Red dots indicate non-U.S. price fluctuations`,
-                ]
-              }
-            ]
-          }
-        ]
-      }
+                ],
+              },
+            ],
+          },
+        ],
+      },
     ],
   },
   {
@@ -557,35 +559,51 @@ export const items: ItemsList[] = [
         id: 'future-overview',
         range: null,
         paragraphs: [
-          `Our forward-looking strategy encompasses several dimensions:`
+          `Our forward-looking strategy encompasses several dimensions:`,
         ],
         complexList: [
           {
             title: 'Model Enhancements:',
             items: [
-              `Our ambition extends beyond the present, as we aim to pioneer fully automated robo-advisory asset management. The envisioned 'bot of bots' will dynamically rebalance and manage assets, making decisions grounded in the track records of diverse models.`
-            ]
+              `Our ambition extends beyond the present, as we aim to pioneer fully automated robo-advisory asset management. The envisioned 'bot of bots' will dynamically rebalance and manage assets, making decisions grounded in the track records of diverse models.`,
+            ],
           },
           {
             title: 'Augmenting Analytical and Predictive Capacities:',
             items: [
               `We're poised to harness the capabilities of Generative AIs, Transformers, and Large Language Models (LLMs). This integration addresses the current models' sentiment analysis and macroeconomic event interpretation limitations.`,
-              `Recognising the ever-increasing complexity of financial data, our commitment is to further our models' reach. Yet, the more intricate the problems, the greater the computational demand. Traditional computing mechanisms have their constraints. Thus, we are setting our sights on the quantum frontier. Leveraging the unparalleled processing prowess of quantum mechanics, which allows for simultaneous multi-state computations, we anticipate tasks that traditionally take millennia to be executable within mere moments.`
-            ]
+              `Recognising the ever-increasing complexity of financial data, our commitment is to further our models' reach. Yet, the more intricate the problems, the greater the computational demand. Traditional computing mechanisms have their constraints. Thus, we are setting our sights on the quantum frontier. Leveraging the unparalleled processing prowess of quantum mechanics, which allows for simultaneous multi-state computations, we anticipate tasks that traditionally take millennia to be executable within mere moments.`,
+            ],
           },
           {
             title: 'Diversification into Other Sectors:',
             items: [
-              `While details remain under strategic evaluation, our expansionary aspirations extend to multiple market segments and industries.`
+              `While details remain under strategic evaluation, our expansionary aspirations extend to multiple market segments and industries.`,
             ],
-            afterParagraph: [
-              `This blueprint reflects our ambitions and our unwavering dedication to innovation and excellence.`
-            ]
-          }
-        ]
+          },
+        ],
       },
+      {
+        name: '',
+        id: 'actions',
+        range: null,
+        paragraphs: [
+          'To achieve our goals, we have initiated the integration of data-intensive Foundation models across the entire economy over the coming years. Our approach commenced with categorizing each asset class based on their inherent risk profiles. We aim to systematically model these assets, ranging from Low-Risk to Very-High-Risk categories, using a consistent methodology that includes:',
+          `1. Identifying and documenting key influencing factors.`,
+          `2. Comprehensive data collection.`,
+          `3. Rigorous modeling processes.`,
 
+          'As illustrated in the accompanying image, our current focus is on Government Bonds and Savings Accounts. We are optimistic that this sector will be fully modeled within the next three months, aligning with our established roadmaps.',
+        ],
+        picture: [
+          {
+            url: last,
+            firstSetOfParagraphs: [
+              `This blueprint reflects our ambitions and our unwavering dedication to innovation and excellence.`,
+            ],
+          },
+        ],
+      },
     ],
   },
-]
-
+];
